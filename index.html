@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quint — Project Showcase</title>
+<meta name="description" content="Quint: an MNQ futures trading research platform — chart reading, market analysis and a planned automated trading engine.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#000410; --panel:#000a20; --violet:#691de6; --violet-hi:#bc5cfd;
+  --blue:#1973eb; --cyan:#43e2fd; --green:#0aea63; --amber:#f49d15;
+  --text:#e9ecff; --muted:#9aa3c7;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,sans-serif;
+  background-image:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(105,29,230,.35),transparent 70%)}
+a{color:var(--cyan)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+header{padding:72px 0 40px;text-align:center}
+.logo{font:700 clamp(48px,10vw,88px)/1 "Chakra Petch",sans-serif;letter-spacing:.18em;margin:0;
+  color:#fff;text-shadow:0 0 18px var(--violet-hi),0 0 42px var(--violet)}
+.tag{font:500 13px "Chakra Petch",sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--cyan);margin:18px 0 0}
+.lede{max-width:640px;margin:22px auto 0;color:var(--muted);font-size:18px}
+nav{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:30px}
+nav a{text-decoration:none;color:var(--text);padding:9px 16px;border:1px solid var(--violet);border-radius:999px;
+  font:500 14px "Chakra Petch",sans-serif;letter-spacing:.08em;box-shadow:0 0 12px rgba(105,29,230,.5)}
+nav a:hover,nav a:focus-visible{border-color:var(--violet-hi);box-shadow:0 0 18px var(--violet-hi);outline:none}
+section{padding:48px 0}
+h2{font:700 clamp(26px,4vw,34px) "Chakra Petch",sans-serif;letter-spacing:.06em;margin:0 0 8px}
+.kicker{font:500 12px "Chakra Petch",sans-serif;letter-spacing:.28em;text-transform:uppercase;margin:0 0 6px}
+.k-v{color:var(--violet-hi)} .k-c{color:var(--cyan)} .k-g{color:var(--green)} .k-a{color:var(--amber)}
+.card{background:var(--panel);border:1px solid var(--violet);border-radius:16px;padding:24px;
+  box-shadow:0 0 0 1px rgba(188,92,253,.15),0 0 24px rgba(105,29,230,.35)}
+.hero-img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid rgba(188,92,253,.5)}
+.note{display:inline-block;margin-top:14px;padding:6px 12px;border:1px solid var(--amber);border-radius:999px;
+  color:var(--amber);font-size:13px}
+.split{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:32px;align-items:center}
+.split.rev{grid-template-columns:300px minmax(0,1fr)}
+.split.rev .phone{order:-1}
+.phone{justify-self:center;width:100%;max-width:300px;padding:10px;border-radius:34px;background:#05081a;
+  border:1px solid var(--blue);box-shadow:0 0 24px rgba(25,115,235,.45)}
+.phone img{display:block;width:100%;height:auto;border-radius:26px}
+p{margin:0 0 14px;color:var(--muted)}
+ul{margin:0;padding-left:20px;color:var(--muted)} li{margin:6px 0}
+li strong,p strong{color:var(--text)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:22px}
+.grid .card h3{font:700 18px "Chakra Petch",sans-serif;margin:0 0 8px;letter-spacing:.04em}
+.pill{display:inline-block;font:500 12px "Chakra Petch",sans-serif;letter-spacing:.1em;padding:3px 10px;border-radius:999px;margin-bottom:10px}
+.p-live{color:var(--green);border:1px solid var(--green)}
+.p-plan{color:var(--amber);border:1px solid var(--amber)}
+.p-res{color:var(--violet-hi);border:1px solid var(--violet-hi)}
+footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid rgba(105,29,230,.35);margin-top:30px}
+@media (max-width:760px){
+  header{padding:48px 0 24px}
+  .split,.split.rev{grid-template-columns:1fr}
+  .split.rev .phone{order:0}
+  .card{padding:18px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1 class="logo">QUINT</h1>
+    <p class="tag">Trading research &middot; Analysis &middot; Automation</p>
+    <p class="lede">A family of apps for studying Micro Nasdaq futures (MNQ): learning to read charts, getting a live market read from an AI coach, and building toward a safety-first automated trading engine.</p>
+    <nav aria-label="Sections">
+      <a href="#control">Quint Control</a>
+      <a href="#brain">Quint Brain</a>
+      <a href="#wizard">Chart Wizard</a>
+      <a href="#principles">Principles</a>
+    </nav>
+  </header>
+
+  <section id="control">
+    <p class="kicker k-v">Quint Control &middot; in design</p>
+    <h2>The command centre</h2>
+    <p>The planned trading platform for NinjaTrader 8: bots, a strategy lab, backtesting, forward testing, a prop-firm simulator, copy trading and the Quint assistant, all on one dashboard that works on desktop and phone.</p>
+    <div class="card">
+      <img class="hero-img" src="images/quint-control-concept.jpg" width="1536" height="1024" loading="lazy"
+        alt="Design concept of the Quint Control dashboard: six neon-framed screens covering the trading command centre, strategy lab, copy trading, backtesting, forward testing and Quint Brain.">
+      <span class="note">Design concept. Every figure shown is placeholder data, not real trading results.</span>
+    </div>
+  </section>
+
+  <section id="brain">
+    <div class="split">
+      <div>
+        <p class="kicker k-c">Quint Brain &middot; working app</p>
+        <h2>An AI that reads the market with you</h2>
+        <p>Quint's own app. A 3D neural-network visual shows how Quint is thinking, beside a live market read for MNQ.</p>
+        <ul>
+          <li><strong>Call it now:</strong> ask Quint whether there's a trade and why.</li>
+          <li><strong>5-pillar check:</strong> location, liquidity sweep, CISD, displacement, execution.</li>
+          <li><strong>Matrix, record and alerts</strong> to keep track of every read.</li>
+          <li>Analysis only. It never places orders.</li>
+        </ul>
+      </div>
+      <div class="phone"><img src="images/quint-brain.jpg" width="780" height="1688" loading="lazy" alt="Quint Brain on a phone: a neural-network visual of Quint's layers with quick actions below."></div>
+    </div>
+  </section>
+
+  <section id="wizard">
+    <div class="split rev">
+      <div class="phone"><img src="images/chart-wizard.jpg" width="780" height="1688" loading="lazy" alt="Chart Wizard on a phone: the New York session clock, a funded-account guard and a paper account."></div>
+      <div>
+        <p class="kicker k-g">Chart Wizard &middot; working app</p>
+        <h2>Learn to read the chart</h2>
+        <p>A chart-reading game and practice simulator with Quint built in as the coach.</p>
+        <ul>
+          <li><strong>Session clock</strong> in New York and UK time, showing when the playbook window is open.</li>
+          <li><strong>Account guard</strong> that shows how much room is left before a prop-firm loss limit.</li>
+          <li><strong>Practice on real history:</strong> a year of real Nasdaq, S&amp;P 500, gold and oil days.</li>
+          <li>Paper trading only. Nothing is sent to a broker.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="principles">
+    <p class="kicker k-a">How Quint is built</p>
+    <h2>Principles</h2>
+    <div class="grid">
+      <div class="card"><span class="pill p-res">Evidence</span><h3>Prove it first</h3><p>A strategy earns its place only by beating its costs in a backtest on real MNQ data, measured out of sample.</p></div>
+      <div class="card"><span class="pill p-live">Safety</span><h3>Guardian first</h3><p>Every future automated order passes through one router and a guardian whose limits and kill switches can never be skipped.</p></div>
+      <div class="card"><span class="pill p-plan">Honesty</span><h3>No hype</h3><p>No claims of profit without robust out-of-sample evidence. Failed experiments get logged, not hidden.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    Quint is a personal research project. Nothing here is financial advice.<br>
+    &copy; 2026 Charlie &middot; <a href="https://github.com/charlieaustin1107">GitHub</a>
+  </footer>
+</div>
+</body>
+</html>
